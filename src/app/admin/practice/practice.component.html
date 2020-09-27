@@ -1,0 +1,66 @@
+<p>practice works!</p>
+<h3 [style.background-color]="'red'">SABRISH</h3>
+<h3 [style.width]="'300px'" class="bg-success">SABRISH</h3>
+<h3 [style.color]="has ? 'red' : 'green'">TEJESWAR</h3>
+<button (click)="h()">click</button>
+<h1>*</h1>
+<button (click)="setValue()">setValue</button> <button (click)="patchValue()">patchValue</button>
+<form [formGroup]="form" (ngSubmit)="Submit()">
+    <mat-form-field appearance="outline" class="mt-2 col-lg-6 ">
+        <mat-label>Enter Name</mat-label>
+        <input style="height: 20px;" type="text"  formControlName="name" name="name" matInput
+        [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}">
+        <div class="invalid-feedback">
+            <div>Name is required</div>
+          </div>
+      </mat-form-field>
+       
+      <mat-form-field appearance="outline" class="mt-2 col-lg-6 ">
+        <mat-label>Enter Password</mat-label>
+        <input style="height: 20px;" type="password"  formControlName="password" name="password" matInput
+        [ngClass]="{'is-invalid':form.get('password').touched && form.get('password').invalid}">
+        <div *ngIf="form.get('password').touched && form.get('password').invalid" class="invalid-feedback">
+          <div *ngIf="form.get('password').errors.required"  >
+            Password if Required
+          </div>
+          <div *ngIf="form.get('password').errors.minlength">
+            Min Length is 5
+          </div>          
+        </div>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="mt-2 col-lg-6 ">
+        <mat-label>Enter Mail</mat-label>
+        <input type="text" formControlName="Email" name="Email" matInput
+        [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}">
+        <div *ngIf="form.get('Email').touched && form.get('Email').invalid" class="invalid-feedback">
+          <div *ngIf="form.get('Email').errors.required">
+            Email is required
+          </div>
+          <div *ngIf="form.get('Email').errors.email">
+            Enter valid email address
+          </div>
+        </div> 
+      </mat-form-field>   
+<div formArrayName="contact">
+                <div *ngFor="let x of form.controls.contact.controls;index as i">
+            
+                <mat-form-field appearance="outline" class="mt-2 col-lg-6 ">
+                    <mat-label>Enter Contact</mat-label>
+                    <input [formControlName]="i" matInput>
+                  </mat-form-field>
+                </div>
+        </div>
+        <mat-form-field appearance="outline" class="mt-2 col-lg-6 ">
+            <mat-label>Enter Description</mat-label>
+            <textarea style="height: 20px;" type="text"  formControlName="Description" name="hi" matInput></textarea>
+          </mat-form-field>
+
+      
+
+        <button class="btn btn-success">Sumit</button>
+</form> <br>
+<button  class="btn btn-info" (click)="add()">Add</button>
+
+<button  class="btn btn-info" (click)="remove()">Add</button>
+
+  

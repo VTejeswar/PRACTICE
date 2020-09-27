@@ -1,0 +1,50 @@
+
+
+   <h2>
+        Products:
+    </h2>
+
+        <div class="container-fluid ">
+        <div style="padding:10px;" class="row">
+            <div *ngFor="let x of products_data"  class="col-sm-12 col-md-6 col-lg-3">
+                <div class="prodiv">
+                        <img src="../../../assets/{{x.Image[0]}}"class="img-fluid"
+                        style="height: 300px;width:100%;border-bottom: 2px solid silver;
+                         padding-bottom: 5px;">
+                        <br>&nbsp; &nbsp;
+                        <!-- {{x.Image}} -->
+                        <span style="font-family:fantasy;"> {{x.Brand}}</span><br>
+                        <div style="font-weight: bold;">&nbsp; &nbsp;
+                            <span style="color:green"  *ngIf="x.Newprice">    
+                               {{x.Newprice }}
+                           </span>
+                           &nbsp; &nbsp;
+                           <span *ngIf="x.Oldprice" style="color: red;">
+                               {{x.Oldprice}}
+                           </span><br>           &nbsp; &nbsp;                         
+                           <span class="fa fa-star text-warning" *ngFor="let xy of x.rattingarr">
+                                                                   
+                           </span>
+                           <span class="fa fa-star-half text-warning" *ngIf="x.half==1">
+   
+                           </span>
+                           <br> <div class="row container">&nbsp; &nbsp;
+                           <button class="btn btn-info" [routerLink]="['/user/prodinfo',{oid:x._id}]">More</button>&nbsp; &nbsp;
+                           <button class="btn btn-success"> <span class="fa fa-shopping-cart"></span> Add to Cart</button>
+                       </div>
+                </div>
+            </div> 
+        </div>   
+    </div>
+
+    <div class="container-fluid  bg-danger row ml-1" >
+        <div class="container-block col-lg-3 bg-success">
+                dhjglkt
+        </div>
+        <div class="container-block ml-4 col-lg-8 bg-primary">
+                aaaaaaaaaaaaaaaaaaa
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+{{products_data | json}}      
+ 
