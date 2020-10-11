@@ -1,0 +1,86 @@
+
+  
+<mat-drawer-container class="matcontainer" style="height: 510px ;overflow: hidden;">        
+  <mat-drawer #drw  id="matdrawer" color="primary" style="background-color:white; width:230px;overflow: hidden;">
+              <!-- <div  class="row" style="background-color: rgb(115, 229, 233);height: 64px;overflow: hidden;">
+                  
+                           <h4 style="text-align: center; padding: 16px;" > 
+                            
+                            <i class="fa fa-user-circle-o" style="color: black;font-size: 30px;" aria-hidden="true"></i> 
+                            Hello, Sabrish</h4> 
+                         
+              </div> -->
+              <div style="background-color: rgb(115, 229, 233);height: 60px;">
+                <h4 style="display: inline-block;margin-top: 15px;margin-left: 15px;">
+                  <i class="fa fa-user-circle-o" style="color: black;"></i>
+                  Hello, Sabrish
+                </h4>
+              </div>
+
+            <div class="container" style="background-color: white;overflow: hidden;border-bottom: 1px solid black;">
+            
+
+                      <a routerLink="subsubcat" class="aa" (click)="drw.toggle()" style="margin-top: 5px;" >Home</a>
+                      <br>
+                      <a routerLink="brand" class="aa" (click)="drw.toggle()">Shop by Category</a>
+                      <br>
+                      <a routerLink="product" class="aa" (click)="drw.toggle()" routerLink="todaydeals">Today's Deals</a> <br>
+                  </div>
+                  <div class="container" style="border-bottom:  1px solid black;">
+                      
+                    <a routerLink="subsubcat" class="aa" (click)="drw.toggle()" style="margin-top: 5px;"  routerLink="amazone/d">Your Orders</a>
+                    <br>
+                    <a routerLink="brand" class="aa" (click)="drw.toggle()">Buy Again</a>
+                    <br>
+                    <a routerLink="product" class="aa" (click)="drw.toggle()">Your Wish List</a> <br>
+                    
+                    <a routerLink="subsubcat" class="aa" (click)="drw.toggle()" >Your Account</a>
+                    <br>  
+                    <a routerLink="brand" class="aa" (click)="drw.toggle()">Amazone Pay</a>
+                    <br>
+                    <a routerLink="product" class="aa" (click)="drw.toggle()">Try Prime</a> <br>
+                    
+                    <a routerLink="subsubcat" class="aa" (click)="drw.toggle()"  >Sell on Amazone</a>
+                    <br>
+                    <a routerLink="brand" class="aa" (click)="drw.toggle()">Programs and Features</a>
+                    <br>
+                    <a routerLink="product" class="aa" (click)="drw.toggle()">FunZone</a> <br>
+                  </div>
+
+                  <div class="container" style="border-bottom: 1px solid black; border-top: 1px solid black;">
+                      <img src="../../../assets/download,png.jpg" height="70px " width="100%"  style="padding: 4px;" >
+                  </div>
+
+                  <div class="container" style="background-color: white;">
+            
+
+                    <a routerLink="subsubcat" class="aa" (click)="drw.toggle()" style="margin-top: 9px;" >Languuage </a>
+                    <br>
+                    <a routerLink="brand" class="aa" (click)="drw.toggle()">Your Notifications</a>
+                    <br>
+                    <a routerLink="product" class="aa" (click)="drw.toggle()">Setting</a> <br>
+
+                    <a routerLink="brand" class="aa" (click)="drw.toggle()">Customer Service</a>
+                </div> 
+
+  </mat-drawer>
+  <mat-drawer-content style=" overflow: hidden;" > 
+         <mat-toolbar style="background-color: rgb(115, 229, 233);">
+                 <i class="fa fa-bars" aria-hidden="true" (click)="drw.toggle()"></i>
+          
+               
+       </mat-toolbar>
+
+          <router-outlet></router-outlet>
+
+  </mat-drawer-content>     
+</mat-drawer-container> 
+
+
+
+
+
+
+
+
+

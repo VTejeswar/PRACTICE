@@ -23,6 +23,11 @@ import { ProducctsComponent } from './products/produccts.component';
 import { BrandComponent } from './brand/brand.component';
 import {AgGridModule} from 'ag-grid-angular';
 import { PracticeComponent } from './practice/practice.component';
+import { AmazoneComponent } from './amazone/amazone.component';
+import { TodaydealsComponent } from './todaydeals/todaydeals.component';
+
+
+
 const route:Routes=[
   {path:"",component:AdmincommonComponent,children:[
     {path:"",component:LoginComponent},
@@ -35,10 +40,15 @@ const route:Routes=[
     {path:"brand",component:BrandComponent,canActivate:[GaurdService],data:{mycomp:"brand"}},
     {path:"practice",component:PracticeComponent,canActivate:[GaurdService],data:{mycomp:"brand"}},
     {path:"product",component:ProducctsComponent,canActivate:[GaurdService],data:{mycomp:"product"}}, 
-    {path:"subsubcat",component:SubsubcateComponent,canActivate:[GaurdService],data:{mycomp:"subsubcat"}}, 
+    {path:"subsubcat",component:SubsubcateComponent,canActivate:[GaurdService],data:{mycomp:"subsubcat"}}
+
   ]},   
-       
-]  
+  {path:"amazone",component:AmazoneComponent,children:[
+
+    { path:"todaydeals",component:TodaydealsComponent }
+  ]},
+ 
+]    
 
 @NgModule({
   declarations: [AdmincommonComponent,
@@ -51,7 +61,10 @@ const route:Routes=[
                    WelcomeComponent,
                    ProducctsComponent,
                    BrandComponent,
-                   PracticeComponent],
+                   PracticeComponent,
+                   AmazoneComponent,
+
+                   TodaydealsComponent],
   imports: [
     CommonModule,
     MatInputModule,
@@ -59,6 +72,7 @@ const route:Routes=[
     MatSidenavModule, 
     MatSliderModule,
     MatToolbarModule,
+
     MatMenuModule,
     AgGridModule,
     NgxPaginationModule,

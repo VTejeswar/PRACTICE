@@ -1,0 +1,28 @@
+      <div class="container-block">
+            <div style="padding: 20px;text-align: center;">
+             <h4 style="color: red;"> TODAY'S <span style="color: brown;">DEALS</span> </h4>
+            </div>        
+        </div> 
+ 
+         <a href="">FEATURED</a>
+         <a href="">ALL DEALS</a>
+         <a href="">UPCOMING</a>
+         <a href="">WATCHLIST</a>
+        
+            <div  style="background-color: rgb(138, 238, 238);height: 60px;margin-top: 4px;overflow: hidden;">
+                <div style="background-color:rgb(10, 160, 160) ;display: inline-block;height: 60px;width: 70px;" >
+                    <i class="fa fa-calendar" aria-hidden="true" style="font-size:30px ;padding: 2px;margin-left: 13px;"></i>
+                    <br>
+                    <p style="text-align: center;">25 Deals </p>
+                 </div>
+          
+            </div> 
+       
+                <div class="col-lg-6 bg-success" *ngFor="let x of data_subsubcategory">
+                        <p>Ends in soon</p>
+                        <img src="../../../assets/{{x.Image}}" alt="">
+
+                </div>
+            
+             {{data_subsubcategory  | json}}
+          

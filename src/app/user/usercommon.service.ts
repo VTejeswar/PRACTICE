@@ -32,6 +32,8 @@ export class UsercommonService {
       return this.http.post(`${this.settingss.server_path}/user/userInsr`,data);
    }
  
+
+ 
 }
 
   
