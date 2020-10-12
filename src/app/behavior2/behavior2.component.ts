@@ -19,4 +19,11 @@ vall:any;
   hi(x) { 
       this.service.changeVlue(x)
   }
+
+  people:any=[
+    {name:'Sabrish',country:'india'},
+    {name:'Tejeswar',country:'usa'},
+    {name:'Ram',country:'india'},
+    {name:'Sankar',country:'usa'}
+  ]
 }

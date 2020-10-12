@@ -1,3 +1,12 @@
 {{data2}}
 <input type="text"  [(ngModel)]="vall">
-<button (click)="hi(vall)">ClickMe</button>
+<button (click)="hi(vall)" [ngStyle]="{'color':'red'}">ClickMe</button>
+
+
+<ul style="width: 400px;margin-top: 40px;">
+    <li *ngFor="let x of people" [ngStyle]="{'background-color':x.country==='india'?'red' :'green','list-style':'none' }">
+        {{x.country}}
+    </li>
+</ul>
+
+<!-- https://codecraft.tv/courses/angular/built-in-directives/ngstyle-and-ngclass/ -->
