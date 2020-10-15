@@ -1,0 +1,42 @@
+
+    
+ <form  [formGroup]="product"
+    (ngSubmit)="funsubmit()">
+    
+    <label for="">Category</label>
+        <select class="form-control "
+         formControlName="category" 
+         style="width: 300px;"  name="kjd" (change)="funsubmit($event.target.value)" > 
+     
+            <option [value]="x.catname" *ngFor="let x of arr" >{{x.catname}}</option>
+        </select>
+            <!-- /////////////////// -->
+    <label for="">Subcategory</label>
+   
+        <select class="form-control "
+        formControlName="subcategory" 
+        style="width: 300px;"  name="kjd" (change)="subfunsubmit($event.target.value)" >
+        <ng-container *ngIf="shwsubcatselect" style="background-color: aliceblue;">
+           
+            <option [value]="z" *ngFor="let z of SubCatrgoriesData" >{{z}}</option>
+        </ng-container>
+        </select>
+       <!-- /////////////////// -->
+        <label for="">Subcategory</label>
+        <select class="form-control" formControlName="subsubcat" name="asdf" id=""
+          style="width: 300px;" (change)="finalcatsubmit()"  >
+          <ng-container *ngIf="shwsubsubcatselect" >
+            <option [value]="zx"  *ngFor="let zx of subsubcat"  >{{zx}}</option>
+          </ng-container>
+           
+        </select>
+
+
+        <button class="btn btn-success" style="width: 100%;">Add Product</button>
+      </form>
+     CAT <span>{{arr | json }}</span>
+      <br> <br>
+      SUBCAT <span>{{SubCatrgoriesData | json }}</span>
+       <br> <br>
+       SUBSUBCAT <span>{{subsubcat | json }}</span>
+      

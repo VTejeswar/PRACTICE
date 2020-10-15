@@ -10,6 +10,7 @@ import { LogoutComponent } from './logout/logout.component';
 import {AgGridModule} from 'ag-grid-angular';
 import { Behavior1Component } from './behavior1/behavior1.component';
 import { Behavior2Component } from './behavior2/behavior2.component';
+import { DynamicSelectComponent } from './select-category/dynamic-select/dynamic-select.component';
 
 
 
@@ -18,7 +19,8 @@ import { Behavior2Component } from './behavior2/behavior2.component';
     AppComponent,
     LogoutComponent,
     Behavior1Component,
-    Behavior2Component
+    Behavior2Component,
+    DynamicSelectComponent
   ], 
   imports: [ 
     BrowserModule,
@@ -30,6 +32,6 @@ import { Behavior2Component } from './behavior2/behavior2.component';
     AgGridModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [DynamicSelectComponent]
 })
 export class AppModule { }
