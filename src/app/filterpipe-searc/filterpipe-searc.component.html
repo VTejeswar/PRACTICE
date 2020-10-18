@@ -1,0 +1,16 @@
+<p>filterpipe-searc works!</p>
+ <!-- {{data | json}} -->
+        <input type="text" [(ngModel)]="searching">
+    <table class="table table-striped">
+        <th>COUNTRY NAME</th>
+        <th>COUNTRY CAPITAL</th>
+        <th>COUNTRY FLAG</th>
+        <tr *ngFor="let x of data  | searPipe:searching">
+            <td>{{x.name}}</td>
+            <td>{{x.capital}}</td>
+            <td>
+                <img src={{x.flag}} alt="" height="100px" width="100px">
+            </td>
+        </tr>
+    </table>
+    <app-dynamic-select></app-dynamic-select>  

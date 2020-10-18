@@ -34,9 +34,33 @@
 
         <button class="btn btn-success" style="width: 100%;">Add Product</button>
       </form>
+
+             <!-- ///////// nav-bar ///////////// -->
+
+  
+<ul >
+  <ng-container *ngFor="let x of arr">
+    <li>{{x.catname}}</li>
+    <ul>
+      <ng-container *ngFor="let xx of x.products">
+      <li style="list-style-type:disc;" >
+       {{xx.subproduct_name}}
+      </li>
+      <ul>
+        <ng-container *ngFor="let xxx of xx.sub_products">
+          <li style="list-style-type:disc;">{{xxx.sub_product_name}} </li>
+        </ng-container>
+      </ul>
+    </ng-container> 
+  </ul>
+  </ng-container> 
+</ul>
+    
+             <!-- ///////// nav-bar ///////////// -->
+<!--       
      CAT <span>{{arr | json }}</span>
       <br> <br>
       SUBCAT <span>{{SubCatrgoriesData | json }}</span>
        <br> <br>
-       SUBSUBCAT <span>{{subsubcat | json }}</span>
+       SUBSUBCAT <span>{{subsubcat | json }}</span> -->
       

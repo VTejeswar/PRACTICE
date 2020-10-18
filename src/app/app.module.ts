@@ -12,6 +12,9 @@ import { Behavior1Component } from './behavior1/behavior1.component';
 import { Behavior2Component } from './behavior2/behavior2.component';
 import { DynamicSelectComponent } from './select-category/dynamic-select/dynamic-select.component';
 
+import { FilterpipeSearcComponent } from './filterpipe-searc/filterpipe-searc.component';
+import { SearPipePipe } from './sear-pipe.pipe';
+
 
 
 @NgModule({
@@ -20,18 +23,22 @@ import { DynamicSelectComponent } from './select-category/dynamic-select/dynamic
     LogoutComponent,
     Behavior1Component,
     Behavior2Component,
-    DynamicSelectComponent
+    DynamicSelectComponent,
+  
+    FilterpipeSearcComponent,
+  
+    SearPipePipe    
   ], 
   imports: [ 
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
+    AppRoutingModule,   
+    HttpClientModule,    
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AgGridModule
   ],
   providers: [],
-  bootstrap: [DynamicSelectComponent]
+  bootstrap: [FilterpipeSearcComponent]
 })
 export class AppModule { }

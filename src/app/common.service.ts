@@ -21,4 +21,8 @@ export class CommonService {
     serGetSubSubCat(){
       return this.http.get(`${this.settings.server_path}/subsubcatpath/getSubSubcat`)
     }
+
+    practceAPI(){
+      return this.http.get('http://restcountries.eu/rest/v2/all')
+    }
 }
