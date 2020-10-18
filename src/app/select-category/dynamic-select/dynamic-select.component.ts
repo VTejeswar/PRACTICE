@@ -35,7 +35,7 @@ export class DynamicSelectComponent implements OnInit {
       { "sub_product_id": "03", "sub_product_name": "sub_productName3" }] },
        { "product_id": "2", "subproduct_name": "IT Networking" },
         { "product_id": "3", "subproduct_name": "IT Marketing" }]
-   },
+   },  
 
    { "catid": "300", "catname": "Business",
     "products": [{ "product_id": "1", "subproduct_name": "Land Business",
