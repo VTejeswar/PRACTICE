@@ -1,0 +1,39 @@
+ Angular 9|8 Implement Slick Carousel with Custom Navigation using ngx-slick-carousel
+Last updated on April 30, 2020 Jolly.Exe
+
+Primis Player Placeholder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ npm install -g @angular/cliCopy
+
+
+
+$ ng new angular-slick-tutorialCopy
+
+? Would you like to add Angular routing? No
+? Which stylesheet format would you like to use? CSSCopy
+
+$ cd angular-slick-tutorialCopy
+
+$ ng serve --openCopy
+
+
+$ npm install jquery --save
+$ npm install slick-carousel --save
+$ npm install ngx-slick-carousel --save
