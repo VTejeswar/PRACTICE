@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
-})
+})     
 export class CommonService {
   settings=new Settings()
   constructor(private http:HttpClient) { }
@@ -23,6 +23,13 @@ export class CommonService {
     }
 
     practceAPI(){
-      return this.http.get('http://restcountries.eu/rest/v2/all')
+      return this.http.get('http://restcountries.eu/rest/v2/all');
     }
-}
+
+    crudPost(obj){
+      return this.http.post(`${this.settings.server_path}/formdata`,obj);
+    }
+    crudGet(){
+      return this.http.get(`${this.settings.server_path}/get`);
+    }
+} 

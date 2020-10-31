@@ -26,8 +26,9 @@ import { PracticeComponent } from './practice/practice.component';
 import { AmazoneComponent } from './amazone/amazone.component';
 import { TodaydealsComponent } from './todaydeals/todaydeals.component';
 
-
-
+// import { NgImageSliderModule } from 'ng-image-slider';
+  // import { SwiperModule } from 'angular2-useful-swiper';
+  // import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 const route:Routes=[
   {path:"",component:AdmincommonComponent,children:[
     {path:"",component:LoginComponent},
@@ -67,12 +68,13 @@ const route:Routes=[
                    TodaydealsComponent],
   imports: [
     CommonModule,
-    MatInputModule,
+    MatInputModule,  
     MatButtonModule,
     MatSidenavModule, 
     MatSliderModule,
     MatToolbarModule,
-
+    // NgImageSliderModule,
+   // SwiperModule,
     MatMenuModule,
     AgGridModule,
     NgxPaginationModule,

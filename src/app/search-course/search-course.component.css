@@ -1,0 +1,275 @@
+
+body {
+    font-family: 'SF Pro Text',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1.6rem;
+    color: #3c3b37;
+}
+.search-filter-page-cls{
+    width: 100%;
+    max-width: 134rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+}
+.main-header-cls{
+    padding: 10px;
+}
+.seaching-heading-cls{
+    font-family: "Times New Roman", Times, serif;
+/* font-family: 'SF Pro Display',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'; */
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 3.2rem;
+    margin-bottom: 2.4rem;
+}
+
+.related-coures-heading{
+    font-family: 'SF Pro Display',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 1.9rem;
+    
+}
+
+.relared-topics-heading{
+    font-family: 'SF Pro Display',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 1.6rem;
+}
+
+.related-topics--topic-container{
+    margin-left: .4rem;
+
+}
+
+.refund-notice-alert-banner-inner{
+    display: flex;
+    justify-content: center;
+}
+
+.filter-button-container--button-bar{
+    display: flex;
+    margin: 0 -.4rem;
+}
+
+.filter-btn-cls{
+    color: #0f7c90;
+    height: 50px !important;
+    background-color: transparent;
+    border: 1px solid #2896a9;  
+    position: relative;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    min-width: 10rem;
+    padding: 0 1.2rem;
+    justify-content: center;
+    user-select: none;
+    vertical-align: bottom;
+    white-space: nowrap;
+    margin: 0 .4rem;
+    height: 4.8rem;
+    /* font-weight: 700; */
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 1.6rem;
+}
+
+.filter-select{
+    position: relative;
+    /* bottom: 15px; */
+    width: 200px;
+    height: 50px;
+    bottom: 23px;
+}
+
+.filter-panel--filtered-course-list{
+    display: flex;
+    width: 100%;
+    transition: 400ms cubic-bezier(.2,0,.38,.9);
+}
+.filter-panel--sidebar{
+    width: 18rem;
+    padding-right: 4rem;
+    margin-right: .8rem;
+    max-height: 80rem;
+    transition: 400ms cubic-bezier(.2,0,.38,.9);
+}
+
+.filter-panel--paginated-course-list{
+    position: relative;
+    flex: 1;
+    min-width: 1px;
+}
+
+.sidebar-filter-panel{
+    border-top: 1px solid #dcdacb;
+    margin-bottom: 5px;
+}
+
+.sidebar-filter-heading-cls{
+    padding: 10px;
+}
+.course-card-image{
+    display: flex;
+}
+.course-card-image img{
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.course-card--main-content{
+    color: #3c3b37;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 1px;
+    position: relative;
+}
+
+.course-card-course-title{
+    margin-bottom: .4rem;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.course-card-instructor-list{
+    color: #73726c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.star-rating--star-wrapper{
+    display: inline-flex;
+    align-items: center;
+}
+
+.udlite-sr-only{
+position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.udlite-heading-sm{
+    font-family: 'SF Pro Display',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 1.4rem;
+
+}
+
+.course-card-review-text{
+    color: #73726c;
+    margin-left: .4rem;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1.2rem;
+}
+
+.course-card-row-info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.course-card-hours-info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.course-card-price-text{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    text-align: right;
+} 
+.align{
+    text-align: center;
+}
+
+
+
+.udlite-btn-ghost:active, .udlite-btn-link:active, .udlite-btn-ghost:hover, .udlite-btn-link:hover {
+    color: #094c59;
+}
+
+.panel--outer-panel-toggler--2Xmux {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.6rem 0;
+}
+.panel--panel-toggler--39q84 {
+    border-radius: 0;
+    color: #3c3b37!important;
+ 
+    text-align: left;
+    white-space: normal;
+    width: 100%;
+}
+.udlite-btn-link {
+    height: auto;
+    vertical-align: baseline;
+}
+/* /////////////////// */
+.maindiv{
+ border-top: 1px solid rgb(201, 194, 194);
+ border-bottom: 1px solid rgb(201, 194, 194);      
+}
+/* @media screen and (min-width: 991px) {
+    .maindiv{
+       
+    }
+     .title-errow{
+       
+       margin-bottom: 120px;
+       margin-left: 0px;
+       
+    }
+    .inputsdiv{
+    
+      width:216px;
+        margin-left: -203px;
+        margin-bottom:30px;
+  } 
+} */
+/* @media screen and (min-width:1020px) {
+    .maindiv{
+       
+    }
+     .title-errow{
+       
+       margin-bottom: 120px;
+       margin-left: 0px;
+       
+    }
+    .inputsdiv{
+
+      
+      width:200px;
+  
+        margin-left: -203px;
+        margin-bottom:30px;
+        background-color: chocolate;
+  } 
+} */
+

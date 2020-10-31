@@ -1,0 +1,57 @@
+{{res}}
+
+
+<div  class="container main-div" >
+    <h4>Crud App</h4>
+ 
+        <form [formGroup]="crudform" (ngSubmit)="save()">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" class="form-control" formControlName="name" placeholder="Enter Name"  >
+            </div>
+            <div class="form-group">
+              <label for="pwd">Gender</label>
+              <input type="text" class="form-control" formControlName="gender" placeholder="Enter Gender" >
+            </div>
+            <div class="form-group">
+              <label for="pwd">City</label>
+              <input type="text" class="form-control" formControlName="city" placeholder="Enter City" >
+            </div>
+            <div class="form-group">
+                <label for="pwd">Phone</label>
+                <input type="number" class="form-control" formControlName="Phone" placeholder="Enter Phone" >
+              </div>
+
+            <div class="form-group">
+                <label for="pwd">State</label>
+                <input type="text" class="form-control" formControlName="State" placeholder="Enter State">
+              </div>
+         
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+         
+</div>
+        <br>
+        <div class="container">
+            <!-- {{getData | json}} -->
+            <table class="table table-striped">
+        
+                <th class="main-div">Name</th>
+                <th class="main-div">Gender</th>
+                <th class="main-div">City</th>
+                <th class="main-div">Phone</th>
+                <th class="main-div">State</th>
+
+                <tr *ngFor="let x of getData" [ngStyle]="{'background-color':x.gender=='Male'?'cornflowerblue':'darkgoldenrod'}" >
+                        <td>{{x.name}}</td>
+                        <td >{{x.gender }}</td>
+                        <td>{{x.city}}</td>
+                        <td>{{x.phone}}</td>
+                        <td>{{x.state}}</td>
+                </tr>
+            </table>
+        </div>
+
+
+        
+       

@@ -14,7 +14,12 @@ import { DynamicSelectComponent } from './select-category/dynamic-select/dynamic
 
 import { FilterpipeSearcComponent } from './filterpipe-searc/filterpipe-searc.component';
 import { SearPipePipe } from './sear-pipe.pipe';
-
+import { SearchCourseComponent } from './search-course/search-course.component';
+import { RegisterComponent } from './user/register/register.component';
+import { CrudWithManyconceptComponent } from './crud-with-manyconcept/crud-with-manyconcept.component';
+import { HttpConfigInterceptor } from './crud-with-manyconcept/inteceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgImageSliderModule } from 'ng-image-slider/lib/ng-image-slider.module';
 
 
 @NgModule({
@@ -23,22 +28,33 @@ import { SearPipePipe } from './sear-pipe.pipe';
     LogoutComponent,
     Behavior1Component,
     Behavior2Component,
-    DynamicSelectComponent,
-  
-    FilterpipeSearcComponent,
-  
-    SearPipePipe    
+    DynamicSelectComponent,  
+    FilterpipeSearcComponent,  
+    SearPipePipe,  
+    SearchCourseComponent,
+    SearchCourseComponent,
+    RegisterComponent,
+    CrudWithManyconceptComponent    
   ], 
   imports: [ 
     BrowserModule,
     AppRoutingModule,   
     HttpClientModule,    
     FormsModule,
+    
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AgGridModule
   ],
-  providers: [],
-  bootstrap: [FilterpipeSearcComponent]
+  providers: [
+    {
+      provide : HTTP_INTERCEPTORS,
+      useClass : HttpConfigInterceptor,  
+      multi : true
+
+    }
+   
+  ],    
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
