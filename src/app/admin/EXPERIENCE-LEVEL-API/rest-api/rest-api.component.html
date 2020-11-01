@@ -1,0 +1,14 @@
+
+
+
+
+        <div class="container mt-5">
+            <form [formGroup]="formsdata" (ngSubmit)="submit()">
+                <input type="text" class="form-control" name="sabrish" placeholder="Sabrish" formControlName="name">
+               <br> <input type="file" class="form-control" (change)="uploadFile($event)" >
+            
+               <br> <button class="btn btn-danger">Click</button>
+            </form><br> <br>
+            {{data}}
+        </div>
+        

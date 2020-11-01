@@ -84,16 +84,21 @@
       </form>
       </div>  
 
-
+      <div *ngIf="spiner">
+        <div class="spinner-border"></div> 
+      </div>
       <h1 class="text-warning text-center mt-5 text-underlined"><u>Product Details</u></h1>
       <ag-grid-angular [rowData]="ProductData" [columnDefs]="columnDefs" class="ag-theme-alpine"
        style="height:400px;width: 100%;" rowSelection="multiple">
   
       </ag-grid-angular>
-  
-  
-  
-
+      <div *ngIf="spiner">
+        <div class="spinner-border"></div> 
+      </div>
+     <br>
+  <button (click)="getPRoductData()">hi</button>
+      <h3>PRODUCT DATA</h3>
+      {{ProductData | json}} <br>
 <h3 class="text-warning">CAT_DATA</h3>
 {{data_category | json}}    <br>       
 <h3 class="text-success">SUBCAT_DATA</h3>
@@ -101,5 +106,3 @@
 <h3 class="text-primary">SUBSUBCAT_DATA</h3>
 {{SubSubCatData |json}}       
 
-<h3>PRODUCT DATA</h3>
-{{ProductData | json}}

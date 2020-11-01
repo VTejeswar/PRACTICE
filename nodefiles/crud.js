@@ -17,6 +17,7 @@
         }
     }
     app.post("/formdata",[chec],(req,res)=>{
+        console.log(req.body)
         connn.UserDetails.save(req.body,(err)=>{
             if(err)
             res.send(err)
@@ -35,3 +36,4 @@
     }) 
     app.listen(1000)
     console.log('server started')
+

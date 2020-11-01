@@ -10,19 +10,19 @@ import Swal from 'sweetalert2'
   styleUrls: ['./crud-with-manyconcept.component.css']
 })
 export class CrudWithManyconceptComponent implements OnInit {
-
+  spiner=false;
   crudform:FormGroup;
   getData:any;
   result:any;
-  
+  restcountry:any;
   constructor(private service:CommonService) {
   var res=document.URL
       alert(res)
       var x=res.split("/")
       alert(x[3].split(","))
     
-    this.get()
-
+    // this.get()
+      this.restcountrydata()
    }
 
   ngOnInit(): void {
@@ -60,4 +60,15 @@ export class CrudWithManyconceptComponent implements OnInit {
           this.getData=dt
         })
     }
+
+    restcountrydata() { 
+      if(this.restcountry==null){
+        this.spiner=true;
+        this.service.practce().subscribe((dt:any)=>{
+          this.spiner=false
+         this.restcountry=dt
+        })
+      }
+ 
+  }
 }

@@ -20,6 +20,7 @@ import { CrudWithManyconceptComponent } from './crud-with-manyconcept/crud-with-
 import { HttpConfigInterceptor } from './crud-with-manyconcept/inteceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgImageSliderModule } from 'ng-image-slider/lib/ng-image-slider.module';
+import { RestAPIComponent } from './admin/EXPERIENCE-LEVEL-API/rest-api/rest-api.component';
 
 
 @NgModule({
@@ -28,13 +29,14 @@ import { NgImageSliderModule } from 'ng-image-slider/lib/ng-image-slider.module'
     LogoutComponent,
     Behavior1Component,
     Behavior2Component,
-    DynamicSelectComponent,  
-    FilterpipeSearcComponent,  
-    SearPipePipe,  
-    SearchCourseComponent,
-    SearchCourseComponent,
+    // DynamicSelectComponent,  
+    // FilterpipeSearcComponent,
+    // SearPipePipe,  
+    // SearchCourseComponent,
+    // SearchCourseComponent,
     RegisterComponent,
-    CrudWithManyconceptComponent    
+    RestAPIComponent
+    // CrudWithManyconceptComponent    
   ], 
   imports: [ 
     BrowserModule,
@@ -55,6 +57,6 @@ import { NgImageSliderModule } from 'ng-image-slider/lib/ng-image-slider.module'
     }
    
   ],    
-  bootstrap: [AppComponent]
+  bootstrap: [RestAPIComponent]
 })
 export class AppModule { }

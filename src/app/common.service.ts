@@ -25,11 +25,18 @@ export class CommonService {
     practceAPI(){
       return this.http.get('http://restcountries.eu/rest/v2/all');
     }
+    practce(){
+      return this.http.get('http://restcountries.eu/rest/v2/all');
+    }
 
     crudPost(obj){
       return this.http.post(`${this.settings.server_path}/formdata`,obj);
     }
     crudGet(){
       return this.http.get(`${this.settings.server_path}/get`);
+    }
+
+    trilesend(obj){
+      return this.http.post(`${this.settings.server_path}/formdata`,obj);
     }
 } 

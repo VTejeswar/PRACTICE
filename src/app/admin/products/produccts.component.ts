@@ -10,12 +10,13 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ProducctsComponent implements OnInit {
   drpSubcat:any;
   // validation:ValidationForm=new ValidationForm()
-  product:FormGroup
+  product:FormGroup;
+  spiner=false;
   constructor(private service:CommonService) {
     this.getCategory();
     this.getSubCategory();
     this.getSubSubCat();
-    this.getProduct();
+    // this.getProduct();
        }
   ngOnInit() {
     this.getCategory();
@@ -79,7 +80,7 @@ export class ProducctsComponent implements OnInit {
        }
      }
      funsubmit(){       
-       
+       this.spiner=true;
          var obj={
           Brand:this.product.controls.Brand.value,
           Category:this.product.controls.category.value,
@@ -103,16 +104,17 @@ export class ProducctsComponent implements OnInit {
       fid.submit()      
       this.service.serInsertProduct(obj).subscribe((dt:any)=>{
         alert(dt.result);
+        this.spiner=false;
         console.log(this.product.value); 
         alert(this.product.value)
-        this.getProduct();
+        // this.getProduct();
       })
 
      }
 
  
      ProductData:any;
-     getProduct(){
+     getPRoductData(){
        if(this.service.ser_product_data==null){
          this.service.serGetProduct().subscribe((dt:any)=>{
             this.ProductData=dt;

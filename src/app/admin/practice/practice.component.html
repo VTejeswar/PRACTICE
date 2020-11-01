@@ -1,6 +1,6 @@
 <p>practice </p>
 
- <h1>FormControl and FormGroup Properties.</h1>
+ <!-- <h1>FormControl and FormGroup Properties.</h1>
 1] Value
 2] Errors
 3] Valid
@@ -8,11 +8,11 @@
 5] Dirty
 6] Pristine
 7] Touched
-8] Untouched
-<h1>AbstractControl class methods
+8] Untouched -->
+<!-- <h1>AbstractControl class methods
   The AbstractControl class have useful properties and this class also provides these useful methods.
   
-  </h1>
+  </h1> -->
 
   setValidators()
   clearValidators()
@@ -76,12 +76,12 @@
             <textarea style="height: 20px;" type="text"  formControlName="Description" name="hi" matInput></textarea>
           </mat-form-field>
 
+    
+            <input class="form-control" type="file" (change)="uploadFile($event)">
       
-
+<br> <br>
         <button class="btn btn-success">Sumit</button>
 </form> <br>
-<button  class="btn btn-info" (click)="add()">Add</button>
+<button  class="btn btn-info" (click)="add()">Add</button>&nbsp;
 
-<button  class="btn btn-info" (click)="remove()">Add</button>
-
-  
+<button  class="btn btn-info" (click)="remove()">Remove</button>   

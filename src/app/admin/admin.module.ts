@@ -25,6 +25,13 @@ import {AgGridModule} from 'ag-grid-angular';
 import { PracticeComponent } from './practice/practice.component';
 import { AmazoneComponent } from './amazone/amazone.component';
 import { TodaydealsComponent } from './todaydeals/todaydeals.component';
+import { CrudWithManyconceptComponent } from '../crud-with-manyconcept/crud-with-manyconcept.component';
+import { FilterpipeSearcComponent } from '../filterpipe-searc/filterpipe-searc.component';
+import { SearchCourseComponent } from '../search-course/search-course.component';
+import { DynamicSelectComponent } from '../select-category/dynamic-select/dynamic-select.component';
+import { SearPipePipe } from '../sear-pipe.pipe';
+import { SlideCarouselComponent } from './slide-carousel/slide-carousel.component';
+// import { RestAPIComponent } from './EXPERIENCE-LEVEL-API/rest-api/rest-api.component';
 
 // import { NgImageSliderModule } from 'ng-image-slider';
   // import { SwiperModule } from 'angular2-useful-swiper';
@@ -41,8 +48,13 @@ const route:Routes=[
     {path:"brand",component:BrandComponent,canActivate:[GaurdService],data:{mycomp:"brand"}},
     {path:"practice",component:PracticeComponent,canActivate:[GaurdService],data:{mycomp:"brand"}},
     {path:"product",component:ProducctsComponent,canActivate:[GaurdService],data:{mycomp:"product"}}, 
-    {path:"subsubcat",component:SubsubcateComponent,canActivate:[GaurdService],data:{mycomp:"subsubcat"}}
+    {path:"subsubcat",component:SubsubcateComponent,canActivate:[GaurdService],data:{mycomp:"subsubcat"}},
 
+    {path:"crud",component:CrudWithManyconceptComponent},
+    {path:"filter-search",component:FilterpipeSearcComponent},
+    {path:"search-course",component:SearchCourseComponent},
+    {path:"select-cat",component:DynamicSelectComponent},
+    {path:"slider",component:SlideCarouselComponent}
   ]},   
   {path:"amazone",component:AmazoneComponent,children:[
 
@@ -64,8 +76,14 @@ const route:Routes=[
                    BrandComponent,
                    PracticeComponent,
                    AmazoneComponent,
-
-                   TodaydealsComponent],
+                   SearPipePipe,
+                   TodaydealsComponent,
+                   CrudWithManyconceptComponent,
+                   FilterpipeSearcComponent,
+                   SearchCourseComponent,
+                   DynamicSelectComponent,
+                   SlideCarouselComponent
+                  ],
   imports: [
     CommonModule,
     MatInputModule,  
