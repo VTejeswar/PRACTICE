@@ -2,7 +2,7 @@
 
 
 
-        <div class="container mt-5">
+        <!-- <div class="container mt-5">
             <form [formGroup]="formsdata" (ngSubmit)="submit()">
                 <input type="text" class="form-control" name="sabrish" placeholder="Sabrish" formControlName="name">
                <br> <input type="file" class="form-control" (change)="uploadFile($event)" >
@@ -10,5 +10,39 @@
                <br> <button class="btn btn-danger">Click</button>
             </form><br> <br>
             {{data}}
-        </div>
+        </div> -->
         
+
+            <!-- <div class="container bg-dark">
+                <div class="row">
+                    <div class="col-sm-3 bg-warning tooltip">.col-sm-3
+
+                        <span class="tooltiptext">Tooltip text</span>
+                    </div>
+                    <div class="col-sm-3  bg-primary tooltip">.col-sm-3
+                        <span class="tooltiptext">Tooltip text</span>
+                    </div>
+                    <div class="col-sm-3 bg-danger tooltip">.col-sm-3
+                        <span class="tooltiptext">Tooltip text</span>
+                    </div>
+                    <div class="col-sm-3 bg-info tooltip">.col-sm-3
+                        <span class="tooltiptext">Tooltip text</span>
+                    </div>
+                  </div>
+            </div> -->
+   <h1>hksdhfwhjhgyguhygyu</h1> 
+
+
+  <br><br>
+
+  <br>  <br>
+  <div class="container bg-success" style="overflow: hidden;">
+    <div class="tooltippppp col-lg-3 col-md-6 col-sm-6" style="height: 300px;border: 1px solid red;" *ngFor="let x of arr" (mouseover)="overs(x)">
+        Hover over me <br>
+      {{x.id}}
+      <div class="tooltiptextttt col-lg-12 col-md-12 col-sm-10" >Tooltip text 
+          <br>  <span style="color: aliceblue;"></span>
+           {{z}}
+      </div>
+    </div>
+  </div>

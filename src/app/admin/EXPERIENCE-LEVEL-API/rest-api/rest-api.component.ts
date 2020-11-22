@@ -44,4 +44,16 @@ countryGetting(){
     this.data=dt;
   }
 )}
+
+
+arr=[
+  {id:1},
+  {id:2},
+  {id:3},
+  {id:4}
+]
+z=[];
+overs(x){
+  this.z=x.id
+}
 }

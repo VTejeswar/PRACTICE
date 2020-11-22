@@ -1,0 +1,28 @@
+
+  /* ///////////////////////// */
+
+  .tooltippppp {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .tooltippppp .tooltiptextttt {
+    visibility: hidden;
+    /* width:320px; */
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0px 0;
+  height: 300px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 100;
+    /* left:100px; */
+    top:0px;
+  }
+  
+  .tooltippppp:hover .tooltiptextttt {
+    visibility: visible;
+  }
