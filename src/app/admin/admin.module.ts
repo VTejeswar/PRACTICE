@@ -78,7 +78,7 @@ const route:Routes=[
                    AmazoneComponent,
                    SearPipePipe,
                    TodaydealsComponent,
-                   CrudWithManyconceptComponent,
+                  //  CrudWithManyconceptComponent,
                    FilterpipeSearcComponent,
                    SearchCourseComponent,
                    DynamicSelectComponent,

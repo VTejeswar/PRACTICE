@@ -9,7 +9,7 @@
             
                <br> <button class="btn btn-danger">Click</button>
             </form><br> <br>
-            {{data}}
+           
         </div> -->
         
 
@@ -36,13 +36,14 @@
   <br><br>
 
   <br>  <br>
-  <div class="container bg-success" style="overflow: hidden;">
+  <!-- <div class="container bg-success" style="overflow: hidden;">
     <div class="tooltippppp col-lg-3 col-md-6 col-sm-6" style="height: 300px;border: 1px solid red;" *ngFor="let x of arr" (mouseover)="overs(x)">
         Hover over me <br>
       {{x.id}}
       <div class="tooltiptextttt col-lg-12 col-md-12 col-sm-10" >Tooltip text 
           <br>  <span style="color: aliceblue;"></span>
-           {{z}}
+           {{data}}
       </div>
     </div>
-  </div>
+  </div> -->
+  {{data | json}}

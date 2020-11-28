@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Settings } from './settings';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,  } from '@angular/common/http';
+import {HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,21 @@ import { HttpClient } from '@angular/common/http';
 export class CommonService {
   settings=new Settings()
   constructor(private http:HttpClient) { }
+
+
+
+
+
+  
+  trilesend(obj){
+    return this.http.post(`${this.settings.server_path}/formdata`,obj);
+  }
+
+
+
+
+
+
   serGetCategory(){
 
     return this.http.get(`${this.settings.server_path}/catpath/getCategory`)
@@ -25,9 +41,6 @@ export class CommonService {
     practceAPI(){
       return this.http.get('http://restcountries.eu/rest/v2/all');
     }
-    practce(){
-      return this.http.get('http://restcountries.eu/rest/v2/all');
-    }
 
     crudPost(obj){
       return this.http.post(`${this.settings.server_path}/formdata`,obj);
@@ -36,7 +49,6 @@ export class CommonService {
       return this.http.get(`${this.settings.server_path}/get`);
     }
 
-    trilesend(obj){
-      return this.http.post(`${this.settings.server_path}/formdata`,obj);
-    }
+  
 } 
+

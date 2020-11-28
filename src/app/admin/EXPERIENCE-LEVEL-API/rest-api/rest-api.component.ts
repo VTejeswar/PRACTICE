@@ -20,7 +20,7 @@ export class RestAPIComponent implements OnInit {
       name:new FormControl("",[Validators.required]),
       file:new FormControl("",[Validators.required])
     })
-
+      this.countryGetting()
   }
   uploadFile(event){
     const filez=event.target.files[0];

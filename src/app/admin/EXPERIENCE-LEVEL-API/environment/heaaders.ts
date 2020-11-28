@@ -78,6 +78,7 @@ export class BaseHttpClientService {
         headers = headers || new HttpHeaders();
         headers = headers.set('Content-Type', 'application/json');
         headers = headers.set('Accept', 'application/json');
+        headers = headers.set('Access-Control-Allow-Origin', '*');
         return {
           headers: headers
         }

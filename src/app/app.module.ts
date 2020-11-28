@@ -35,8 +35,8 @@ import { RestAPIComponent } from './admin/EXPERIENCE-LEVEL-API/rest-api/rest-api
     // SearchCourseComponent,
     // SearchCourseComponent,
     RegisterComponent,
-    RestAPIComponent
-    // CrudWithManyconceptComponent    
+    RestAPIComponent,
+    CrudWithManyconceptComponent    
   ], 
   imports: [ 
     BrowserModule,

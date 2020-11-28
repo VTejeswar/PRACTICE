@@ -21,8 +21,8 @@ export class CrudWithManyconceptComponent implements OnInit {
       var x=res.split("/")
       alert(x[3].split(","))
     
-    // this.get()
-      this.restcountrydata()
+    
+    
    }
 
   ngOnInit(): void {
@@ -32,7 +32,8 @@ export class CrudWithManyconceptComponent implements OnInit {
       city:new FormControl("",[Validators.required]),
       Phone:new FormControl("",[Validators.required]),
       State:new FormControl("",[Validators.required])
-    })
+    });
+    this.get()
   }
   save() {    
     if(this.crudform.valid){ 
@@ -58,17 +59,17 @@ export class CrudWithManyconceptComponent implements OnInit {
     get() { 
         this.service.crudGet().subscribe((dt:any)=>{
           this.getData=dt
+          Swal.fire(dt.auth)
+          console.log('dt.auth)',dt.auth)
         })
     }
-
-    restcountrydata() { 
-      if(this.restcountry==null){
-        this.spiner=true;
-        this.service.practce().subscribe((dt:any)=>{
-          this.spiner=false
-         this.restcountry=dt
-        })
-      }
- 
+    sss:any;
+    restcountrydata(){ 
+      this.service.crudGet().subscribe((dt:any)=>{
+        this.sss=dt
+        Swal.fire(dt.auth)
+        console.log('dt.auth)',this.sss)
+      })
   }
 }
+   
