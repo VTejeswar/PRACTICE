@@ -59,7 +59,7 @@ const route:Routes=[
     { path:"todaydeals",component:TodaydealsComponent }
   ]},
  
-]    
+]     
 
 @NgModule({
   declarations: [AdmincommonComponent,

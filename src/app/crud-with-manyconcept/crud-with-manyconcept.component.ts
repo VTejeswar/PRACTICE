@@ -10,6 +10,9 @@ import Swal from 'sweetalert2'
   styleUrls: ['./crud-with-manyconcept.component.css']
 })
 export class CrudWithManyconceptComponent implements OnInit {
+///////////////////////
+  players:any=["Sachin","Dhoni","Kohli","Zaheer"]
+///////////////////////
   spiner=false;
   crudform:FormGroup;
   getData:any;

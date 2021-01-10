@@ -57,3 +57,10 @@
       
        <button class="btn btn-warning" (click)="restcountrydata()" >COUTRY DATA</button>
        {{restcountry | json}}
+            <br><br><br>
+       <!-- ////////////////////////// -->
+       <ul>
+        <li *ngFor="let x of players;odd as o; let e = even" 
+        [ngClass]="{'odd':o,'even':e}"> <b> {{x}}</b></li>
+      </ul>
+      <!-- /////////////////////////// -->
