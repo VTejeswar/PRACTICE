@@ -30,7 +30,6 @@ import { FilterpipeSearcComponent } from '../filterpipe-searc/filterpipe-searc.c
 import { SearchCourseComponent } from '../search-course/search-course.component';
 import { DynamicSelectComponent } from '../select-category/dynamic-select/dynamic-select.component';
 import { SearPipePipe } from '../sear-pipe.pipe';
-import { SlideCarouselComponent } from './slide-carousel/slide-carousel.component';
 // import { RestAPIComponent } from './EXPERIENCE-LEVEL-API/rest-api/rest-api.component';
 
 // import { NgImageSliderModule } from 'ng-image-slider';
@@ -53,8 +52,7 @@ const route:Routes=[
     {path:"crud",component:CrudWithManyconceptComponent},
     {path:"filter-search",component:FilterpipeSearcComponent},
     {path:"search-course",component:SearchCourseComponent},
-    {path:"select-cat",component:DynamicSelectComponent},
-    {path:"slider",component:SlideCarouselComponent}
+    {path:"select-cat",component:DynamicSelectComponent}
   ]},   
   {path:"amazone",component:AmazoneComponent,children:[
 
@@ -81,8 +79,7 @@ const route:Routes=[
                   //  CrudWithManyconceptComponent,
                    FilterpipeSearcComponent,
                    SearchCourseComponent,
-                   DynamicSelectComponent,
-                   SlideCarouselComponent
+                   DynamicSelectComponent
                   ],
   imports: [
     CommonModule,
