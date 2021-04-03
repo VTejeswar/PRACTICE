@@ -73,7 +73,7 @@ const route:Routes=[
                    ProducctsComponent,
                    BrandComponent,
                    PracticeComponent,
-                   AmazoneComponent,
+                  //  AmazoneComponent,
                    SearPipePipe,
                    TodaydealsComponent,
                   //  CrudWithManyconceptComponent,

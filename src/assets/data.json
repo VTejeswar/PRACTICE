@@ -1,0 +1,14 @@
+
+
+ [
+    {"course":"angular","city":"hyd"},
+    {"name":"react","city":"hyd"},
+    {"name":"mongodb","city":"hyd"},
+    {"name":"css","city":"hyd"},
+    {"name":"javascript","city":"hyd"},
+    {"name":"typescript","city":"hyd"},
+    {"name":"java","city":"hyd"},
+    {"name":".net","city":"hyd"}
+
+]
+
